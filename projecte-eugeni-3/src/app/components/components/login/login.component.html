@@ -1,0 +1,15 @@
+<form [formGroup]="formulari" (ngSubmit)="acces()">
+    <mat-form-field>
+        <mat-label>Usuari</mat-label>
+        <input matInput formControlName="usuari" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Contrasenya</mat-label>
+        <input matInput type="password" formControlName="contra" required>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary" [disabled]="!formulari.valid">
+        Accedir
+    </button>
+</form>
